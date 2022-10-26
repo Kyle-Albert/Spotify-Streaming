@@ -11,8 +11,14 @@ music$ts <- lubridate::with_tz(
   as.POSIXct(music$ts, format = "%Y-%m-%dT%H:%M:%OSZ", tz = "UTC"),
   tz = time_zone)
 
+podcasts <- read.csv("/home/rstudio/work/source_data/df_podcasts.csv")
+podcasts$ts <- lubridate::with_tz(
+  as.POSIXct(podcasts$ts, format = "%Y-%m-%dT%H:%M:%OSZ", tz = "UTC"),
+  tz = time_zone)
+
 if(!dir.exists("/home/rstudio/work/derived_data/")){
   dir.create("/home/rstudio/work/derived_data")
 }
 
-save(music, file="/home/rstudio/work/derived_data/music.Rda")
+save(music, file="/home/rstudio/work/derived_data/music.rda")
+save(podcasts, file="/home/rstudio/work/derived_data/podcasts.rda")
