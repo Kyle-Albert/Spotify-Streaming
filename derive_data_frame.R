@@ -20,5 +20,5 @@ if(!dir.exists("/home/rstudio/work/derived_data/")){
   dir.create("/home/rstudio/work/derived_data")
 }
 
-save(music, file="/home/rstudio/work/derived_data/music.rda")
-save(podcasts, file="/home/rstudio/work/derived_data/podcasts.rda")
+save(music, time_zone, file="/home/rstudio/work/derived_data/music.rda")
+save(podcasts, time_zone, file="/home/rstudio/work/derived_data/podcasts.rda")
