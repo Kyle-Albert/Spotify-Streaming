@@ -1,6 +1,7 @@
 library(tidyverse)
 library(lubridate)
 library(gridExtra)
+pdf(NULL)
 load("/home/rstudio/work/derived_data/music.rda")
 
 # Minutes per year
@@ -26,7 +27,6 @@ minutes_day <- music %>%
   scale_fill_gradient(low = "gray", high = "purple") + 
   labs(x= "Hour", y= "Minutes") + 
   ggtitle("Minutes of Music Listening vs Hour of Day")
-minutes_day
 
 #Streams day of week
 days_vec <- c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
@@ -51,7 +51,6 @@ song_streams_year <- music %>%
   scale_fill_gradient(low = "gray", high = "purple") + 
   labs(x= "Year", y= "Songs Streamed") + 
   ggtitle("Songs Streamed vs Year")
-song_streams_year
 
 # Unique Song streams per year
 unique_streams_year <- music %>%
@@ -100,7 +99,7 @@ minutes_month_all_years <- music %>%
 
 # Plot each years minutes listening by month for 2014-2022
 min_month <- list()
-for(i in 1:3){
+for(i in 1:9){
   intermediate <-  music %>%
     group_by(ts) %>%
     group_by(date = strftime(ts, "%m", tz=time_zone)) %>%
@@ -118,6 +117,12 @@ for(i in 1:3){
       add_row(date="04", minutes=0)
   }
   
+  if(i==9){
+    intermediate <- intermediate %>% add_row(date="10", minutes=0) %>%
+      add_row(date="11", minutes=0) %>%
+      add_row(date="12", minutes=0)
+  }
+
   min_month[[i]] <- intermediate %>%
     arrange(date) %>% 
     ggplot(aes(x = date, y = minutes)) + 
@@ -168,6 +173,6 @@ ggsave(filename = "/home/rstudio/work/figures/minutes_month_all_years.png",
 
 ggsave(filename = "/home/rstudio/work/figures/min_month_grid.png",
        plot = min_month_grid,
-       width = 6,
-       height = 4,
+       width = 10,
+       height = 10,
        units = "in")
