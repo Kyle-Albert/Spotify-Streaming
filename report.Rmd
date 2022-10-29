@@ -1,0 +1,10 @@
+---
+output:
+  pdf_document: default
+---
+![Minutes per year](/home/rstudio/work/figures/minutes_year.png)
+![Minutes per day](/home/rstudio/work/figures/minutes_week.png)
+![Minutes per hour of day](/home/rstudio/work/figures/minutes_day.png)
+![Minutes per month](/home/rstudio/work/figures/minutes_month_all_years.png)
+![Minutes per month by year](/home/rstudio/work/figures/min_month_grid.png)
+![Songs Streamed per Year vs Unique Songs Streams per Year](/home/rstudio/work/figures/song_streams_year.png)
