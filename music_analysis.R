@@ -1,7 +1,7 @@
 library(tidyverse)
 library(lubridate)
 library(gridExtra)
-pdf(NULL)
+#pdf(NULL)
 load("/home/rstudio/work/derived_data/music.rda")
 
 # Minutes per year
@@ -42,28 +42,20 @@ minutes_week <- music %>%
   ggtitle("Minutes of music listening vs Day of Week")
 
 
-# Song streams per year
-song_streams_year <- music %>%
+song_streams_year_df <- music %>%
   filter(Play == TRUE) %>%
-  count(Play, date = strftime(ts, "%Y", tz=time_zone)) %>%
-  ggplot(aes(x =date, y = n)) + 
-  geom_col(aes(fill = n)) +
-  scale_fill_gradient(low = "gray", high = "purple") + 
-  labs(x= "Year", y= "Songs Streamed") + 
-  ggtitle("Songs Streamed vs Year")
+  count(date = strftime(ts, "%Y", tz=time_zone)) %>%
+  rename(streams = n)
 
-# Unique Song streams per year
-unique_streams_year <- music %>%
+song_streams_year_unique_df <- music %>%
   filter(Play == TRUE) %>%
-  group_by(ts) %>%
   group_by(date = strftime(ts, "%Y", tz=time_zone)) %>%
-  distinct(distinct = track_id) %>%
-  count(date, sort = TRUE) %>%
-  ggplot(aes(x =date, y = n)) + 
-  geom_col(aes(fill = n)) +
-  scale_fill_gradient(low = "gray", high = "purple") + 
-  labs(x= "Year", y= "Songs Streamed") + 
-  ggtitle("Unique Songs Streamed vs Year")
+  distinct(track_id) %>%
+  count() %>%
+  rename(unique_streams = n)
+
+unique_streams_ratio <- inner_join(song_streams_year_unique_df, song_streams_year_df)
+unique_streams_ratio$ratio <- unique_streams_ratio$unique_streams / unique_streams_ratio$streams
 
 # Unique Song streams per month
 months <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -80,7 +72,6 @@ unique_streams_month <- music %>%
   scale_x_discrete(labels = months) +
   labs(x= "Month", y= "Songs Streamed") + 
   ggtitle("Unique Songs Streamed vs Month")
-song_streams_year_g <- arrangeGrob(song_streams_year, unique_streams_year, ncol=2, nrow=1)
 
 
 # Minutes per month
