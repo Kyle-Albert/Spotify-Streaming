@@ -56,6 +56,11 @@ song_streams_year_unique_df <- music %>%
 
 unique_streams_ratio <- inner_join(song_streams_year_unique_df, song_streams_year_df)
 unique_streams_ratio$ratio <- unique_streams_ratio$unique_streams / unique_streams_ratio$streams
+unique_streams_ratio_plot <-ggplot(data=unique_streams_ratio,
+                                   aes(x=date, y=ratio, group=1)) +
+  geom_line() +
+  geom_point()
+unique_streams_ratio_plot
 
 # Unique Song streams per month
 months <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
