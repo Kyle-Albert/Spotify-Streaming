@@ -2,6 +2,7 @@ library(tidyverse)
 library(lubridate)
 library(gridExtra)
 library(gt)
+library(webshot)
 pdf(NULL)
 load("/home/rstudio/work/derived_data/music.rda")
 load("/home/rstudio/work/derived_data/podcasts.rda")
@@ -297,7 +298,7 @@ danceability_day_plot <- ggplot(data=danceability_day,
 
 
 ### Find top 10 most listened to Songs, Artists, and Albums
-height <- 90
+height_gt <- 120
 ## Songs
 top_songs <- music %>%
   group_by(track_id) %>%
@@ -319,10 +320,9 @@ top_songs_gt <- top_songs %>% gt() %>%
                  fn = function(x){
                    web_image(
                      url = top_songs$`Cover Art`,
-                     height= height)
+                     height= height_gt)
                  }
   )
-
 
 
 ## Top Albums
@@ -345,7 +345,7 @@ top_albums_gt <- top_albums %>% gt() %>%
                  fn = function(x){
                    web_image(
                      url = top_albums$`Cover Art`,
-                     height= height)
+                     height= height_gt)
                  }
   )
 
@@ -371,7 +371,7 @@ top_artists_gt <- top_artists %>% gt() %>%
                  fn = function(x){
                    web_image(
                      url = top_artists$`Cover Art`,
-                     height= height)
+                     height= height_gt)
                  }
   )
 
