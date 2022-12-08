@@ -2,9 +2,50 @@
 output:
   pdf_document: default
 ---
+Hello
+
 ![Minutes per year](/home/rstudio/work/figures/minutes_year.png)
-![Minutes per day](/home/rstudio/work/figures/minutes_week.png)
+
+![Ratio of unique song streams to total song streams per year](/home/rstudio/work/figures/streams_ratio_year.png)
+
+
 ![Minutes per hour of day](/home/rstudio/work/figures/minutes_day.png)
-![Minutes per month](/home/rstudio/work/figures/minutes_month_all_years.png)
+
+
+![Minutes per day of week](/home/rstudio/work/figures/minutes_week.png)
+
+
+![Minutes per month, all Years](/home/rstudio/work/figures/minutes_month_all_years.png)
+
+
 ![Minutes per month by year](/home/rstudio/work/figures/min_month_grid.png)
-![Songs Streamed per Year vs Unique Songs Streams per Year](/home/rstudio/work/figures/song_streams_year.png)
+
+
+![Songs Streamed per Year vs Unique Songs Streams per Year](/home/rstudio/work/figures/release_year_plot.png)
+
+
+![Valence by year](/home/rstudio/work/figures/valence_year_plot.png)
+
+
+![Valence by Month](/home/rstudio/work/figures/valence_month_plot.png)
+
+
+![Valence by Day](/home/rstudio/work/figures/valence_day_plot.png)
+
+
+![Valence by Hour](/home/rstudio/work/figures/valence_hour_plot.png)
+
+
+![Energy by Hour](/home/rstudio/work/figures/energy_hour_plot.png)
+
+
+![Energy by Day](/home/rstudio/work/figures/energy_day_plot.png)
+
+
+![Danceability by Hour](/home/rstudio/work/figures/danceability_hour_plot.png)
+
+
+![Danceability by Day](/home/rstudio/work/figures/danceability_day_plot.png)
+
+
+
