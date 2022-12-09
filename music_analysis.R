@@ -603,8 +603,8 @@ ggsave(filename = "/home/rstudio/work/figures/danceability_day_plot.png",
        units = units)
 
 
-top_songs_gt %>% gtsave(filename="/home/rstudio/work/html/top_songs_gt.png",
-                        expand=10)
+top_songs_gt %>% gtsave(filename="/home/rstudio/work/html/top_songs_gt.html",
+                        inline_css=TRUE)
 
 top_albums_gt %>% gtsave(filename="/home/rstudio/work/html/top_albums_gt.html",
                         inline_css=TRUE)
