@@ -9,12 +9,12 @@ The analyses performed are mostly visualizations and summerizations of data, how
 ### Build the docker container
 Clone this repository to your local computer, naviagte into the directory and build the docker container with the following command (ensuring you have docker installed first)
 ```
-sudo docker build . -t Spotify_Streaming
+sudo docker build . -t spotify_streaming
 ```
 
 Then run the docker container with the following command, the password can be changed to whatever you would like by replacing "password" after "PASSWORD=" with your password of choice.
 ```
-sudo docker run -v "$(pwd)":/home/rstudio/work -e PASSWORD=password -p 8787:8787 -it Spotify_Streaming
+sudo docker run -v "$(pwd)":/home/rstudio/work -e PASSWORD=password -p 8787:8787 -it spotify_streaming
 
 ```
 
