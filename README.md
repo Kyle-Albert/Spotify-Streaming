@@ -44,10 +44,10 @@ make report.pdf
 
 ## Output
 ### Report
-If you would like to just read the final report, rather than building it from the source code it is available as "report.pdf"
+If you would like to read the final report, rather than building it from the source code, it is available in "output/report.pdf"
 [report.pdf](output/report.pdf)
 
-### Figures
+### Sample Figures
 ![](output/min_month_grid.png)
 ![](output/top_albums.png)
 ![](output/minutes_year.png)
