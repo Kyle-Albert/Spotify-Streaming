@@ -34,6 +34,7 @@ password
 Navigate to the terminal tab, change into the work directory with
 ```
 cd work
+bash update-tlmgr-latest.sh
 ```
 
 And the final report can be built with
