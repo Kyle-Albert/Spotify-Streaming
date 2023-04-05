@@ -41,3 +41,8 @@ And the final report can be built with
 ```
 make report.pdf
 ```
+
+### Report
+If you would like to just read the final report, rather than building it from the source code it is available as "report.pdf"
+[report.pdf](report.pdf)
+
