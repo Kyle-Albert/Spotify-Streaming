@@ -45,6 +45,7 @@ make report.pdf
 ## Output
 ### Report
 If you would like to read the final report, rather than building it from the source code, it is available in "output/report.pdf"
+
 [report.pdf](output/report.pdf)
 
 ### Sample Figures
