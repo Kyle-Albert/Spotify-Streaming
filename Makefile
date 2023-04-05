@@ -35,11 +35,11 @@ figures/minutes_year.png\
  figures/energy_day_plot.png\
  figures/danceability_hour_plot.png\
  figures/danceability_day_plot.png\
- html/top_songs_gt.html\
- html/top_albums_gt.html\
- html/top_artists_gt.html\
- html/top_year_summary_gt.html\
- html/top_podcasts_gt.html: .created-dirs\
+ html/top_songs.html\
+ html/top_albums.html\
+ html/top_artists.html\
+ html/top_year_summary.html\
+ html/top_podcasts.html: .created-dirs\
  music_analysis.R\
  derived_data/music.rda
 	Rscript music_analysis.R
@@ -61,10 +61,10 @@ report.pdf: .created-dirs\
  figures/energy_day_plot.png\
  figures/danceability_hour_plot.png\
  figures/danceability_day_plot.png\
- html/top_songs_gt.html\
- html/top_albums_gt.html\
- html/top_artists_gt.html\
- html/top_year_summary_gt.html\
- html/top_podcasts_gt.html
+ html/top_songs.html\
+ html/top_albums.html\
+ html/top_artists.html\
+ html/top_year_summary.html\
+ html/top_podcasts.html
 	R -e "rmarkdown::render(\"report.Rmd\", output_format=\"pdf_document\")"
 
