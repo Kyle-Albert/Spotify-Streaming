@@ -382,7 +382,6 @@ top_artists_gt <- top_artists %>% gt() %>%
 
 
 ### List of top thing from each year
-i <- 2
 top_year_summary <- data.frame()
 for(i in 1:10){
 intermediate_song <- music %>%
@@ -392,7 +391,7 @@ intermediate_song <- music %>%
   group_by(track_id) %>%
   summarize(Year = 2023 - i, Song_Minutes = floor(sum(ms_played) / 60000))
 intermediate_song <- intermediate_song[order(intermediate_song$Song_Minutes, decreasing = TRUE),]
-intermediate_song <- intermediate_song[1:30,]
+intermediate_song <- intermediate_song[1:10,]
 intermediate_song <- left_join(intermediate_song, distinct_tracks)
 intermediate_song <- intermediate_song %>% mutate(Rank= row_number())
 intermediate_song <- intermediate_song[,c(2,38,14,3,6,7,8)]
@@ -406,7 +405,7 @@ intermediate_album <- music %>%
   group_by(master_metadata_album_album_name) %>%
   summarize(Year = 2023 - i, Song_Minutes = floor(sum(ms_played) / 60000))
 intermediate_album <- intermediate_album[order(intermediate_album$Song_Minutes, decreasing = TRUE),]
-intermediate_album <- intermediate_album[1:30,]
+intermediate_album <- intermediate_album[1:10,]
 intermediate_album <- left_join(intermediate_album, distinct_albums)
 intermediate_album <- intermediate_album %>% mutate(Rank=row_number())
 intermediate_album <- intermediate_album[,c(38,14,3,1,7)]
@@ -421,7 +420,7 @@ intermediate_artist <-  music %>%
   group_by(master_metadata_album_artist_name) %>%
   summarize(Year = 2023 - i, Artist_Minutes = floor(sum(ms_played) / 60000))
 intermediate_artist <- intermediate_artist[order(intermediate_artist$Artist_Minutes, decreasing = TRUE),]
-intermediate_artist <- intermediate_artist[1:30,]
+intermediate_artist <- intermediate_artist[1:10,]
 intermediate_artist <- left_join(intermediate_artist, distinct_artists)
 intermediate_artist <- intermediate_artist %>% mutate(Rank=row_number())
 intermediate_artist <- intermediate_artist[, c(38,14,3,1)]
