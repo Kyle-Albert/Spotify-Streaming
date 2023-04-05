@@ -42,9 +42,10 @@ And the final report can be built with
 make report.pdf
 ```
 
-## Report
+## Output
+### Report
 If you would like to just read the final report, rather than building it from the source code it is available as "report.pdf"
-[report.pdf](report.pdf)
+[report.pdf](output/report.pdf)
 
-### HTML Table
-![](top_year_summary.html)
+### Figures
+![](output/min_month_grid.png)
