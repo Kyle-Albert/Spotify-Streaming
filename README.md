@@ -49,3 +49,9 @@ If you would like to just read the final report, rather than building it from th
 
 ### Figures
 ![](output/min_month_grid.png)
+![](output/top_albums.png)
+![](output/minutes_year.png)
+![](output/top_songs.png)
+![](output/release_year_plot.png)
+![](output/top_artists.png)
+
