@@ -47,4 +47,4 @@ If you would like to just read the final report, rather than building it from th
 [report.pdf](report.pdf)
 
 ### HTML Table
-[Top Year Summary](top_year_summary.html)
+![](top_year_summary.html)
