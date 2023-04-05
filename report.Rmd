@@ -1,7 +1,7 @@
 ---
+title: "Spotify Streaming Data Visualization"
 output:
-  pdf_document :
-    default
+  pdf_document: default
 ---
 ```{r global_options, echo=FALSE}
 knitr::opts_chunk$set(fig.pos = "H", out.extra = "")
@@ -304,15 +304,15 @@ The remaining figures are *.html files, accessible by your local browser, within
 
 For each of the following tables, songs, albums, and artists are ranked based on minutes of listening, rather than number of plays. Philosophically, I value the amount of time spent listening to a track more than number of listens, as I also find this makes comparisons between tracks more honest, the number of plays for a longer song should naturally be less than that of an "equally played" shorter song. (An argument for the converse could be made, if I listen to a song I usually listen to the full thing which would inherently benefit longer tracks.)
 
-(top_songs_gt.html) This is a table of my 15 most played songs, I was surprised to see "Secrets" by "The Weeknd" in my top 10 as I have not listened to that song much recently, but it used to be a daily repeat. I am incredibly surprised to see "Africa" by "Toto" and "True" by "Spandau Ballet" on this list, whenever I listen to older music I would have thought I trended towards different artists. I would not have expected either of these to be in my top 30 most listened to songs.
+(top_songs.html) This is a table of my 15 most played songs, I was surprised to see "Secrets" by "The Weeknd" in my top 10 as I have not listened to that song much recently, but it used to be a daily repeat. I am incredibly surprised to see "Africa" by "Toto" and "True" by "Spandau Ballet" on this list, whenever I listen to older music I would have thought I trended towards different artists. I would not have expected either of these to be in my top 30 most listened to songs.
 
-(top_albums_gt.html) This is a table of my 15 most played albums. Philosophically, I would like to see which are my top albums as a measure of which Albums do I put on and listen to as a collective unit, rather than a summation of the time spent listening to singles, but Spotify does not track music listening this way, and I am not even sure how I would want this tracked in my ideal situation. For instance, my top Album, "ABBA Gold" by "ABBA", is a compilation album, and most of my time spent listening comes from "ABBA" songs being on a playlist which I would shuffle through, rather than exclusively listening to the "ABBA Gold" album. Despite my qualms with how this list is constructed, it feels like an honest list which reflects my Philisophy of how I would rank my albums. I am surprised to see "Gameshow" by "Two Door Cinema Club" as high up on this list as it is, and by a decent margin over 3rd.
+(top_albums.html) This is a table of my 15 most played albums. Philosophically, I would like to see which are my top albums as a measure of which Albums do I put on and listen to as a collective unit, rather than a summation of the time spent listening to singles, but Spotify does not track music listening this way, and I am not even sure how I would want this tracked in my ideal situation. For instance, my top Album, "ABBA Gold" by "ABBA", is a compilation album, and most of my time spent listening comes from "ABBA" songs being on a playlist which I would shuffle through, rather than exclusively listening to the "ABBA Gold" album. Despite my qualms with how this list is constructed, it feels like an honest list which reflects my Philisophy of how I would rank my albums. I am surprised to see "Gameshow" by "Two Door Cinema Club" as high up on this list as it is, and by a decent margin over 3rd.
 
-(top_artists_gt.html) This is a table of my 15 most listened to artists. There are no surprises on this list and I am happy to see some of my 80s influences popping up.
+(top_artists.html) This is a table of my 15 most listened to artists. There are no surprises on this list and I am happy to see some of my 80s influences popping up.
 
-(top_podcasts_gt.html) This is a table of my 15 most listened to podcasts. I spend plenty of time listening to podcasts during commute or while working. I knew "The Adam Friedland Show" would be high on this list, but given that I have only started listening to it in 2022, and 2022 only include listening data from January-September, I am surprised to see it has over 15 days worth of playtime.
+(top_podcasts.html) This is a table of my 15 most listened to podcasts. I spend plenty of time listening to podcasts during commute or while working. I knew "The Adam Friedland Show" would be high on this list, but given that I have only started listening to it in 2022, and 2022 only include listening data from January-September, I am surprised to see it has over 15 days worth of playtime.
 
-(top_summary_year_gt.html) This table shows my most listened to songs, albums, and artists from each year. I discovered and fell in love with "Beach House" in 2022, and this table reflects that given they have my top song, album, and artist. I am surprised to see some of the songs and artists which were the top for the year, like "Daydream/Wetdream/Nightmare" by "Saint Motel" in 2019 as my most played song, or "Hoodie Allen" as my most played artist in 2017.
+(top_summary_year.html) This table shows my most listened to songs, albums, and artists from each year. I discovered and fell in love with "Beach House" in 2022, and this table reflects that given they have my top song, album, and artist. I am surprised to see some of the songs and artists which were the top for the year, like "Daydream/Wetdream/Nightmare" by "Saint Motel" in 2019 as my most played song, or "Hoodie Allen" as my most played artist in 2017.
 
 
 
