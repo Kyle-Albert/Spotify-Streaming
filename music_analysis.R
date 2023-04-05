@@ -605,17 +605,17 @@ ggsave(filename = paste0(dir,"figures/danceability_day_plot.png"),
        units = units)
 
 
-top_songs_gt %>% gtsave(filename=paste0(dir,"html/top_songs_gt.html"),
+top_songs_gt %>% gtsave(filename=paste0(dir,"html/top_songs.html"),
                         inline_css=TRUE)
 
-top_albums_gt %>% gtsave(filename=paste0(dir,"html/top_albums_gt.html"),
+top_albums_gt %>% gtsave(filename=paste0(dir,"html/top_albums.html"),
                         inline_css=TRUE)
 
-top_artists_gt %>% gtsave(filename=paste0(dir,"html/top_artists_gt.html"),
+top_artists_gt %>% gtsave(filename=paste0(dir,"html/top_artists.html"),
                          inline_css=TRUE)
 
-top_year_summary_gt %>% gtsave(filename=paste0(dir,"html/top_year_summary_gt.html"),
+top_year_summary_gt %>% gtsave(filename=paste0(dir,"html/top_year_summary.html"),
                           inline_css=TRUE)
 
-top_podcasts_gt %>% gtsave(filename=paste0(dir,"html/top_podcasts_gt.html"),
+top_podcasts_gt %>% gtsave(filename=paste0(dir,"html/top_podcasts.html"),
                           inline_css=TRUE)
