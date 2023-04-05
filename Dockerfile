@@ -7,5 +7,5 @@ RUN R -e "install.packages(\"gridExtra\")"
 RUN R -e "install.packages(\"markdown\")"
 RUN R -e "install.packages(\"gt\")"
 
-RUN Bash update-tlmgr-latest.sh
+RUN bash update-tlmgr-latest.sh
 
