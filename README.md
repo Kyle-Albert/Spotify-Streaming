@@ -31,7 +31,7 @@ and the password will be whatever is above, default is
 ```
 password
 ```
-Navigate to the terminal tab, change into the work directory with
+Navigate to the terminal tab, change into the work directory (and update TexLive) with
 ```
 cd work
 bash update-tlmgr-latest.sh
